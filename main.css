@@ -84,7 +84,7 @@ main{
     flex-direction: column;
     width: 35%;
     font-family: 'easesemi';
-    font-size: 0.95rem;
+    font-size: 0.75rem;
 }
 .toggle{
     cursor:pointer;
@@ -143,8 +143,6 @@ main{
         grid-template-columns: repeat(2, 1fr);
         gap: 5rem;
         width: 80%;
-        font-family: 'easesemi';
-        font-size: 0.95rem;
         margin: 3rem
     }
     .grid-container{
