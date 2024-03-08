@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'easesemi';
+    src:    url('assets/fonts/Ease.woff');
+    font-weight: medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'easereg';
+    src:    url('assets/fonts/Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'easebold';
+    src:    url('assets/fonts/Bold.woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html{
+    margin:0;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1.6rem;
+    margin: 0;
+    margin-left: -1;
+    padding: 5rem;
+}
+
+main{
+    width: 98vw;
+    margin: 1rem;
+}
+.heading-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'easereg';
+    padding-bottom: 2rem;
+}
+
+.grid-container{
+    width: 50%;
+    height: 100vh;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 10rem;
+    overflow: scroll;
+}
+
+.grid-item{
+    grid-column: span 1;
+    padding-bottom: 55%;
+    position: relative;
+    transition: 500ms ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-item img{
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    transition: transform 0.3s ease; 
+}
+
+.flex-container{
+    display: flex;
+    align-items: start;
+ }
+
+.script-container{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    font-family: 'easesemi';
+    font-size: 0.95rem;
+}
+.toggle{
+    cursor:pointer;
+    opacity: 0.5;
+}
+
+.toggle:hover{
+    opacity: 1;
+}
+
+.footer{
+    font-family: 'easebold';
+    font-size: 0.75rem;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex; 
+    justify-content: center; 
+    color: white;
+    font-family: 'easereg';
+    font-size: 1rem;
+    opacity: 0;
+    padding: 3%; 
+    box-sizing: border-box; 
+    text-align: center;
+    transition: opacity 0.3s ease; 
+}
+.grid-item:hover img{
+    filter: blur(3px); 
+}
+
+.grid-item .overlay-text {
+    transition: opacity 0.3s ease;
+}
+
+.grid-item:not(:hover) .overlay-text {
+    opacity: 0;
+} /*used some online tutorials to help here + ChatGPT to troubleshoot*/
+
+.grid-item:hover .overlay-text {
+    opacity: 1; 
+}
+
+
+.toggle.active {
+    opacity: 1;
+}
